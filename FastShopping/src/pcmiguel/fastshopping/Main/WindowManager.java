@@ -9,6 +9,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import pcmiguel.fastshopping.Controllers.AdminScreenController;
+import pcmiguel.fastshopping.Controllers.CartScreenController;
 import pcmiguel.fastshopping.Controllers.LoginController;
 import pcmiguel.fastshopping.Controllers.MapaScreenController;
 
@@ -22,7 +23,7 @@ public class WindowManager {
 
 	// Metodo que serve para abrir a janela do Mapa das Lojas
 	public static void openMainWindow() {
-		openWindow("views/MapaScreen.fxml", primaryStage, new MapaScreenController(), "FastShopping", 926, 471);
+		openWindow("../Views/MapaScreen.fxml", primaryStage, new MapaScreenController(), "FastShopping", 400, 600);
 		primaryStage.show();
 	}
 	
@@ -32,6 +33,13 @@ public class WindowManager {
 				600);
 		primaryStage.show();
 	}
+	
+	// Metodo que serve para abrir a janela de Cart
+		public static void openCartWindow() {
+			openWindow("../Views/CartScreen.fxml", primaryStage, new CartScreenController(), "FastShopping", 400,
+					600);
+			primaryStage.show();
+		}
 
 	// Metodo que serve para abrir a janela do Painel Administrativo
 	public static void openAdminWindow() {

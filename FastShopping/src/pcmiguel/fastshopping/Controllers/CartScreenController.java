@@ -1,17 +1,16 @@
 package pcmiguel.fastshopping.Controllers;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.input.MouseEvent;
 import pcmiguel.fastshopping.Main.WindowManager;
 
-public class LoginController {
+public class CartScreenController {
 	
 	@FXML
-    void clickLogin(ActionEvent event) {
+    void mapaLojas(MouseEvent event) {
 		
 		WindowManager.openMainWindow();
 		
     }
-
 
 }

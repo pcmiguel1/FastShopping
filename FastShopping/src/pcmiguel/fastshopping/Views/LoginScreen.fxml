@@ -15,7 +15,7 @@
    <children>
       <TextField layoutX="40.0" layoutY="225.0" prefHeight="40.0" prefWidth="320.0" promptText="User" />
       <PasswordField layoutX="40.0" layoutY="294.0" prefHeight="40.0" prefWidth="320.0" promptText="Password" />
-      <Button layoutY="545.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="400.0" style="-fx-background-color: #43BB73; -fx-background-radius: 0;" text="Login" textFill="WHITE">
+      <Button layoutY="545.0" mnemonicParsing="false" onAction="#clickLogin" prefHeight="55.0" prefWidth="400.0" style="-fx-background-color: #43BB73; -fx-background-radius: 0;" text="Login" textFill="WHITE">
          <opaqueInsets>
             <Insets />
          </opaqueInsets>

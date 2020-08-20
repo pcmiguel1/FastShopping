@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="615.0" fitWidth="938.0" layoutX="-538.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../images/Mapa.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="-8.0" layoutY="538.0" prefHeight="62.0" prefWidth="408.0" style="-fx-background-color: #fff;">
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="22.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../images/hearts_filled_70px.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="184.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../images/map_marker_70px.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="341.0" layoutY="11.0" onMouseClicked="#cart" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../images/shopping_bag_70px.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="21.0" layoutY="14.0" prefHeight="62.0" prefWidth="357.0" style="-fx-background-color: #fff; -fx-background-radius: 15;">
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="54.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../images/user_70px.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="111.0" layoutY="17.0" text="Welcome back,">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="245.0" layoutY="17.0" text="Miguel">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
