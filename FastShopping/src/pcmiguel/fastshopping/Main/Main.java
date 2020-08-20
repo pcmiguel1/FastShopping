@@ -4,8 +4,7 @@ import java.io.IOException;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
-import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
+import pcmiguel.fastshopping.DAOS.DBConnector;
 
 
 public class Main extends Application {
@@ -14,7 +13,7 @@ public class Main extends Application {
 	public void start(Stage primaryStage) throws IOException {
 		
 		//Conectar com a base de dados
-		//DBConnector.abrirConexao();
+		DBConnector.abrirConexao();
 	
 		WindowManager.setPrimaryStage(primaryStage);
 		WindowManager.openLoginWindow();

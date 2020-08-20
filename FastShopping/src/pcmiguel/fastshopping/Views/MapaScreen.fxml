@@ -44,12 +44,12 @@
       </AnchorPane>
       <AnchorPane layoutX="21.0" layoutY="14.0" prefHeight="62.0" prefWidth="357.0" style="-fx-background-color: #fff; -fx-background-radius: 15;">
          <children>
-            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="54.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="54.0" layoutY="11.0" onMouseClicked="#logout" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../images/user_70px.png" />
+                  <Image url="@../../../../images/logout_rounded_left_70px.png" />
                </image>
                <cursor>
-                  <Cursor fx:constant="DEFAULT" />
+                  <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
             <Label layoutX="111.0" layoutY="17.0" text="Welcome back,">

@@ -10,5 +10,10 @@ public class MapaScreenController {
     void cart(MouseEvent event) {
 		WindowManager.openCartWindow();
     }
+	
+	@FXML
+    void logout(MouseEvent event) {
+		WindowManager.openLoginWindow();
+    }
 
 }
