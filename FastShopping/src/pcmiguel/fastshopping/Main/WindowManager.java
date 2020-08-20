@@ -1,7 +1,12 @@
 package pcmiguel.fastshopping.Main;
 
+import javafx.fxml.FXMLLoader;
+import javafx.geometry.Rectangle2D;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 import pcmiguel.fastshopping.Controllers.AdminScreenController;
 import pcmiguel.fastshopping.Controllers.LoginController;
@@ -23,8 +28,8 @@ public class WindowManager {
 	
 	// Metodo que serve para abrir a janela de Login
 	public static void openLoginWindow() {
-		openWindow("views/LoginScreen.fxml", primaryStage, new LoginController(), "FastShopping", 600,
-				400);
+		openWindow("../Views/LoginScreen.fxml", primaryStage, new LoginController(), "FastShopping", 400,
+				600);
 		primaryStage.show();
 	}
 
