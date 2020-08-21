@@ -12,6 +12,7 @@ import pcmiguel.fastshopping.Controllers.AdminScreenController;
 import pcmiguel.fastshopping.Controllers.CartScreenController;
 import pcmiguel.fastshopping.Controllers.LoginController;
 import pcmiguel.fastshopping.Controllers.MapaScreenController;
+import pcmiguel.fastshopping.Controllers.RegisterController;
 
 public class WindowManager {
 
@@ -34,12 +35,19 @@ public class WindowManager {
 		primaryStage.show();
 	}
 	
+	// Metodo que serve para abrir a janela de Register
+	public static void openRegisterWindow() {
+		openWindow("../Views/RegisterScreen.fxml", primaryStage, new RegisterController(), "FastShopping", 400,
+				600);
+		primaryStage.show();
+	}
+	
 	// Metodo que serve para abrir a janela de Cart
-		public static void openCartWindow() {
-			openWindow("../Views/CartScreen.fxml", primaryStage, new CartScreenController(), "FastShopping", 400,
-					600);
-			primaryStage.show();
-		}
+	public static void openCartWindow() {
+		openWindow("../Views/CartScreen.fxml", primaryStage, new CartScreenController(), "FastShopping", 400,
+				600);
+		primaryStage.show();
+	}
 
 	// Metodo que serve para abrir a janela do Painel Administrativo
 	public static void openAdminWindow() {

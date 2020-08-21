@@ -6,6 +6,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import pcmiguel.fastshopping.DAOS.LoginDAO;
 import pcmiguel.fastshopping.Main.WindowManager;
@@ -37,6 +38,11 @@ public class LoginController {
 			login();
 		}
 		
+    }
+	
+	@FXML
+    void createAccount(MouseEvent event) {
+		WindowManager.openRegisterWindow();
     }
 	
 	
