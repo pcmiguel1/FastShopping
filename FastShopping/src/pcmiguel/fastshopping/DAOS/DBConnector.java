@@ -14,10 +14,10 @@ public class DBConnector {
 	public int port;
 	
 	public static void abrirConexao() {
-		String host = "remotemysql.com";
-		String database = "EPbc5S4VLS";
-		String username = "EPbc5S4VLS";
-		String password = "Xc3q9KZz8D";
+		String host = "localhost";
+		String database = "fastshopping";
+		String username = "root";
+		String password = "";
 		Integer port = 3306;
 		
 		String URL = "jdbc:mysql://" + host + ":" + port + "/" + database;
