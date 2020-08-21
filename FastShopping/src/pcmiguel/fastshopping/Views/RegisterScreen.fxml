@@ -55,12 +55,12 @@
          </cursor>
       </Label>
       <PasswordField fx:id="password1" layoutX="40.0" layoutY="364.0" prefHeight="40.0" prefWidth="320.0" promptText="Confirm Password" />
-      <RadioButton layoutX="40.0" layoutY="442.0" mnemonicParsing="false" text="Shop Owner" />
-      <PasswordField fx:id="password11" layoutX="158.0" layoutY="431.0" prefHeight="40.0" prefWidth="201.0" promptText="Code" />
+      <RadioButton layoutX="40.0" layoutY="442.0" mnemonicParsing="false" text="Shop Owner*" />
       <Label layoutX="40.0" layoutY="480.0" text="* Only check if you are a shop owner">
          <font>
             <Font size="10.0" />
          </font>
       </Label>
+      <TextField fx:id="user1" layoutX="164.0" layoutY="431.0" prefHeight="40.0" prefWidth="194.0" promptText="Code" />
    </children>
 </AnchorPane>

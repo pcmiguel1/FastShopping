@@ -32,7 +32,7 @@
             <Image url="@../../../../images/logo.png" />
          </image>
       </ImageView>
-      <AnchorPane fx:id="dialogLoginError" layoutX="61.0" layoutY="367.0" prefHeight="55.0" prefWidth="277.0" style="-fx-background-color: #f4535b; -fx-background-radius: 15;" visible="false">
+      <AnchorPane fx:id="dialogLoginError" layoutX="61.0" layoutY="402.0" prefHeight="55.0" prefWidth="277.0" style="-fx-background-color: #f4535b; -fx-background-radius: 15;" visible="false">
          <children>
             <Label layoutX="56.0" layoutY="17.0" text="username or password wrong!" textFill="#fdfdfd">
                <font>
