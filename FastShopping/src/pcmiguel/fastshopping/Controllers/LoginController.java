@@ -54,8 +54,12 @@ public class LoginController {
 			// Check if the user and password exists
 			if (LoginDAO.checkUser(user.getText(), password.getText())) {
 				
-				WindowManager.openMainWindow();
-				
+				if (LoginDAO.checkAdmin(user.getText())) {
+					WindowManager.openAdminWindow();
+				}
+				else {
+					WindowManager.openMainWindow();
+				}
 			}
 			else {
 				dialogLoginError.setVisible(true);

@@ -51,8 +51,8 @@ public class WindowManager {
 
 	// Metodo que serve para abrir a janela do Painel Administrativo
 	public static void openAdminWindow() {
-		openWindow("views/AdminScreen.fxml", primaryStage, new AdminScreenController(), "FastShopping", 926,
-				471);
+		openWindow("../Views/AdminScreen.fxml", primaryStage, new AdminScreenController(), "FastShopping", 400,
+				600);
 		primaryStage.show();
 	}
 	

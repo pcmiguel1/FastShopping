@@ -27,5 +27,24 @@ public class LoginDAO {
 		}
 		return verificar;
 	}
+	
+	public static boolean checkAdmin(String username) {
+		
+		try {
+			PreparedStatement statement = DBConnector.getConnection().prepareStatement("SELECT isAdmin FROM User WHERE username = ?");
+			statement.setString(1, username);
+			ResultSet results = statement.executeQuery();
+			if (results.next()) {
+				return results.getBoolean(1);
+			}
+			statement.close();
+			results.close();
+		}
+		catch (SQLException ev) {
+			ev.printStackTrace();
+		}
+		return false;
+		
+	}
 
 }
