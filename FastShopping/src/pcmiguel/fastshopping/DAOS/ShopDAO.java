@@ -28,10 +28,10 @@ public class ShopDAO {
 	public static ArrayList<String> loadAllCoodsShops() {
 		ArrayList<String> coordsShop = new ArrayList<String>();
 		try {
-			PreparedStatement statement = DBConnector.getConnection().prepareStatement("SELECT coords FROM Shop");
+			PreparedStatement statement = DBConnector.getConnection().prepareStatement("SELECT coords, shopType FROM Shop");
 			ResultSet results = statement.executeQuery();
 			while (results.next()) {
-				coordsShop.add(results.getString(1));
+				coordsShop.add(results.getString(1)+"#"+results.getString(2));
 			}
 			statement.close();
 			results.close();
