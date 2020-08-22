@@ -13,6 +13,7 @@ import pcmiguel.fastshopping.Controllers.CartScreenController;
 import pcmiguel.fastshopping.Controllers.LoginController;
 import pcmiguel.fastshopping.Controllers.MapaScreenController;
 import pcmiguel.fastshopping.Controllers.RegisterController;
+import pcmiguel.fastshopping.Controllers.ShopScreenController;
 
 public class WindowManager {
 
@@ -55,6 +56,13 @@ public class WindowManager {
 				600);
 		primaryStage.show();
 	}
+	
+	// Metodo que serve para abrir a janela do Painel Administrativo
+		public static void openShopWindow() {
+			openWindow("../Views/ShopScreen.fxml", primaryStage, new ShopScreenController(), "FastShopping", 400,
+					600);
+			primaryStage.show();
+		}
 	
 	// Metodo que serve para a janela do Proprietario da Loja
 	public static void openLojaAddProdutosWindow() {

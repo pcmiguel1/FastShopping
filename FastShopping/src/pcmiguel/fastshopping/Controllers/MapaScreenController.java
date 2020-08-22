@@ -1,5 +1,6 @@
 package pcmiguel.fastshopping.Controllers;
 
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.Cursor;
 import javafx.scene.control.Label;
@@ -9,10 +10,15 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import pcmiguel.fastshopping.DAOS.DBConnector;
 import pcmiguel.fastshopping.DAOS.ShopDAO;
 import pcmiguel.fastshopping.Main.Main;
 import pcmiguel.fastshopping.Main.WindowManager;
 import pcmiguel.fastshopping.Models.ShopType;
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class MapaScreenController {
 	
@@ -21,6 +27,8 @@ public class MapaScreenController {
 	
 	@FXML
     private AnchorPane root;
+	
+	public static int idLoja;
 	
 	@FXML
 	private void initialize() {
@@ -65,6 +73,43 @@ public class MapaScreenController {
 				
 			}		
 		}
+		
+		root.setOnMouseClicked(new EventHandler<MouseEvent>() {
+			
+			public void handle(MouseEvent event) {
+				
+				double x = event.getX();
+				double y = event.getY();
+				
+				try {
+					
+					PreparedStatement statement = DBConnector.getConnection().prepareStatement("SELECT idShop, coords FROM Shop");
+					ResultSet results = statement.executeQuery();
+					while (results.next()) {
+						String coordenadas = results.getString(2);
+						//Vai tirar o # das coordenadas para sabermos a coordenada X e Y
+						String[] split = coordenadas.split("#");
+						double coordxLoja = Double.parseDouble(split[0]);
+						double coordyLoja = Double.parseDouble(split[1]);
+						
+						//Vai comparar se as coordenadas onde o utilizador clicou com o rato coincidem com a da loja
+						if (x > coordxLoja - 13 / 2 && x < coordxLoja + 13 / 2 && y > coordyLoja - 13 / 2 && y < coordyLoja + 13 / 2) {
+							idLoja = results.getInt(1);
+							WindowManager.openShopWindow();
+						}
+						
+					}
+					statement.close();
+					results.close();
+					
+				}
+				catch (SQLException ev) {
+					ev.printStackTrace();
+				}
+				
+			}
+			
+		});
 		
 	}
 	

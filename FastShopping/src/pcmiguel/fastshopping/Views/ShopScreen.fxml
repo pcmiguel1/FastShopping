@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ListView layoutX="9.0" layoutY="125.0" prefHeight="392.0" prefWidth="382.0" />
+      <Label layoutX="90.0" layoutY="439.0" text="200 €" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="-7.0" layoutY="537.0" prefHeight="62.0" prefWidth="408.0" style="-fx-background-color: #fff;">
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="22.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../images/hearts_filled_70px.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="184.0" layoutY="11.0" onMouseClicked="#mapaLojas" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../images/map_marker_70px.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="341.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../images/shopping_bag_70px.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Circle fill="#ff3a1f" layoutX="379.0" layoutY="38.0" radius="9.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Label layoutX="376.0" layoutY="29.0" text="1" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ComboBox layoutX="9.0" layoutY="88.0" prefHeight="30.0" prefWidth="150.0" promptText="Category" />
+      <TextField layoutX="240.0" layoutY="88.0" prefHeight="30.0" prefWidth="150.0" promptText="Search" />
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="209.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../images/search_filled_70px.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="shopName" layoutX="14.0" layoutY="14.0" text="Name">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="14.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../images/filled_star_70px.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="45.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../images/filled_star_70px.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="75.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../images/filled_star_70px.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="105.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../images/filled_star_70px.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="135.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../images/filled_star_70px.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="165.0" layoutY="49.0" text="(20)" />
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="350.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../images/comments_70px.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

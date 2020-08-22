@@ -41,5 +41,23 @@ public class ShopDAO {
 		}
 		return coordsShop;
 	}
+	
+	public static String getShopName(int id) {	
+		String shopName = "";
+		try {
+			PreparedStatement statement = DBConnector.getConnection().prepareStatement("SELECT shopName FROM Shop WHERE idShop = ?");
+			statement.setInt(1, id);
+			ResultSet results = statement.executeQuery();
+			while (results.next()) {
+				shopName = results.getString(1);
+			}
+			statement.close();
+			results.close();
+		}
+		catch (SQLException ev) {
+			ev.printStackTrace();
+		}
+		return shopName;
+	}
 
 }
