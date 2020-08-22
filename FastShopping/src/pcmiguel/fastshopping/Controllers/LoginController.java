@@ -13,6 +13,8 @@ import pcmiguel.fastshopping.Main.WindowManager;
 
 public class LoginController {
 	
+	public static String username;
+	
 	@FXML
     private TextField user;
 
@@ -58,6 +60,7 @@ public class LoginController {
 					WindowManager.openAdminWindow();
 				}
 				else {
+					username = user.getText();
 					WindowManager.openMainWindow();
 				}
 			}

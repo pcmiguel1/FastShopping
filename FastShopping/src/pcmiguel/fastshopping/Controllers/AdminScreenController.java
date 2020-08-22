@@ -112,6 +112,7 @@ public class AdminScreenController {
     	
     	String coord = coordX + "#" + coordY;
     	ShopDAO.addShop(shopName, coord, ownerShop, shopType);
+    	WindowManager.openAdminWindow();
     	
     }
 

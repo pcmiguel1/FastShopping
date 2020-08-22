@@ -1,8 +1,8 @@
 package pcmiguel.fastshopping.Controllers;
 
 import javafx.fxml.FXML;
-import javafx.scene.canvas.Canvas;
-import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.Cursor;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -17,10 +17,15 @@ import pcmiguel.fastshopping.Models.ShopType;
 public class MapaScreenController {
 	
 	@FXML
+    private Label username;
+	
+	@FXML
     private AnchorPane root;
 	
 	@FXML
 	private void initialize() {
+		
+		username.setText(LoginController.username);
 		
 		for (String coords : ShopDAO.loadAllCoodsShops()) {
 			
@@ -41,6 +46,7 @@ public class MapaScreenController {
 					circle.setCenterX(coordx);
 					circle.setCenterY(coordy);
 					circle.setRadius(13);
+					circle.setCursor(Cursor.HAND);
 					
 					Image image = new Image(Main.class.getResource(st.getImage()).toString());
 					
@@ -48,10 +54,9 @@ public class MapaScreenController {
 					
 					imageView.setX(circle.getCenterX() - 9); 
 				    imageView.setY(circle.getCenterY() - 9); 
-				    
-				    
 				    imageView.setFitHeight(18); 
 				    imageView.setFitWidth(18); 
+				    imageView.setCursor(Cursor.HAND);
 					
 					root.getChildren().add(circle);
 					root.getChildren().add(imageView);	

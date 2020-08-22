@@ -6,8 +6,8 @@ public enum ShopType {
 	
 	ROUPA("Roupa", Color.GREEN, "../Images/clothes_50px.png"),
 	RESTAURANTE("Restaurante", Color.RED, "../Images/restaurant_50px.png"),
-	DESPORTO("Desporto", Color.RED, "../Images/restaurant_50px.png"),
-	BRINQUEDOS("Brinquedos", Color.RED, "../Images/restaurant_50px.png");
+	DESPORTO("Desporto", Color.BLUE, "../Images/barbell_50px.png"),
+	BRINQUEDOS("Brinquedos", Color.ORANGE, "../Images/teddy_bear_filled_50px.png");
 	
 	private final String type;
 	private final Color color;
