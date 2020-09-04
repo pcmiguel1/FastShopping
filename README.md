@@ -1,6 +1,6 @@
 ## :rocket: FastShopping
 
-![FastShopping](https://i.imgur.com/07QsuD7.png)
+![FastShopping](https://i.imgur.com/fmTi5LS.png)
 
 ## Enquadramento:
 
